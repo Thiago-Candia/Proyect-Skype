@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    max-height: 100vh;
+}
+
+:root{
+    --black-bgc: #010101;
+    --grey-bgc: #292929;
+    --grey-bgc-icon: #2B333B;
+    --grey-btn: #2B2C33;
+    --grey-text: #AFAFAF;
+    --msg-text: #F1F1F1;
+    --grey-border-icon: #CCCCCC;
+    --blue-bgc: #0E3B82;
+    --hover-select-user: #081E40;
+    --skyblue-bgc: #05ABE8;
+}
+
+
+.btn-config{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.text{
+    color: #F1F1F1;
+}
+
+
+
+
+

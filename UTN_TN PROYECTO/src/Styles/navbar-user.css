@@ -1,0 +1,86 @@
+
+/* NAVBAR CHAT */
+
+.navbar-user-box {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    width: 80%;
+    height: 60px;
+    background-color: var(--black-bgc);
+    border-bottom: 0.5px solid var(--grey-bgc);
+    color: aliceblue;
+    align-items: center;
+}
+
+
+/* IMAGEN USUARIO */
+
+.box-img-usuario{
+    width: 40px;
+}
+
+.box-img-usuario img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* NOMBRE Y ESTADO */
+
+.info-user{
+    display: flex;
+    margin-left: 20px;
+}
+
+.infoUser-name{
+    margin-left: 10px ;
+}
+
+.infoUser-name button{
+    color: var(--msg-text);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nameAndIcon i{
+    margin-left: 5px;
+    font-size: 16px;
+    
+}
+
+.nameAndIcon span{
+    font-size: 18px;
+}
+
+
+/* BOTONES DE NAVBAR, LLAMADA, VIDEOLLAMADA, BUSCAR EN EL CHAT, ETC.  */
+
+.btn-action{
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+    height: 60%;
+}
+
+.btn-action button{
+    color: var(--grey-border-icon);
+    background-color: transparent;
+    border: none;
+}
+
+.btn-action button:nth-last-of-type(-n+2) {
+    background-color: var(--skyblue-bgc);
+    border-radius: 50%;
+}
+
+.btn-action i{
+    padding: 10px;
+    font-size: 14px;
+}
+
+.bi-telephone,
+.bi-camera-video {
+    color: black;
+}

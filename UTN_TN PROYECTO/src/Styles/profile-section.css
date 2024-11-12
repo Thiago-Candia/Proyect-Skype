@@ -1,0 +1,73 @@
+.myProfile-section {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--black-bgc);
+    width: 20%;
+    height: 60px;
+    color: aliceblue;
+    padding: 6px;
+}
+
+/* MI FOTO DE PERFIL */
+
+.myProfile-image{
+    width: 40px;
+
+}
+.myProfile-image img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+/* DIV NOMBRE Y SALDO */
+.myProfile-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.nombre-y-saldo {
+    display: flex;
+    flex-direction: row; /* Coloca el nombre y el saldo uno al lado del otro */
+}
+
+/* SALDO */
+.myProfile-saldo{
+    position: relative;
+    bottom: 3px;
+    margin-left: 10px;
+}
+.myProfile-saldo span{
+    font-size: 10px;
+}
+
+/* NOMBRE */
+.myProfile-nombre span{
+    font-size: 14px;
+}
+
+/* ESTABLECER ESTADO */
+.myProfile-status{
+    top: 25px;
+    left: 60px;
+}
+
+.myProfile-status span{
+    font-size: 10px;
+}
+
+/* BOTON DE OPCIONES */
+.myProfile-options{
+    position: absolute;
+    right: 5px;
+    top: 20px;
+}
+
+.myProfile-options i{
+    font-size: 16px ;
+}
+
+
+
