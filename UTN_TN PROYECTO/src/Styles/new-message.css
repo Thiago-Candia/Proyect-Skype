@@ -4,9 +4,7 @@
     margin: auto;
     justify-content: center;
     background-color: var(--black-bgc);
-    position: relative;
     width: 100%;
-    height: 70%;
 }
 
 .input-box{

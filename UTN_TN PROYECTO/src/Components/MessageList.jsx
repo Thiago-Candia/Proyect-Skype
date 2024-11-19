@@ -23,6 +23,7 @@ const MessageList = ({ messages }) => {
                 {MessageJSX}
             </div>
         </div>
+        
     )
 }
 

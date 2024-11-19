@@ -6,42 +6,21 @@ import SearchChat from "../Components/SearchChat";
 import SelectSearch from "../Components/SelectSearch";
 import AddChat from "../Components/AddChat";
 import ChatList from "../Components/ChatList";
+import OrderChat from "../Components/OrderChat";
+import contacts from "../Data/contacts";
+
 
 const Chat = () => {
-    const [messages, setMessages] = useState ([
-        {
-            emisor: 'Tu',
-            hora: '23:10',
-            id: 1,
-            texto: 'Hola, como andas?',
-        },
-        {
-            emisor: 'Usuario',
-            hora: '23:11',
-            img: 'https://ca.slack-edge.com/T07EJ2FLZ2R-U07F5J8NGCR-ec3380dac16d-72',
-            id: 2,
-            texto: 'Depende',
-        },
-        {
-            emisor: 'Tu',
-            hora: '23:12',
-            id: 3,
-            texto: 'Eso que significa?',
-        },
-        {
-            emisor: 'Tu',
-            hora: '23:13',
-            id: 4,
-            texto: 'Hola?',
-        },
-        {
-            emisor: 'Usuario',
-            hora: '23:13',
-            img: 'https://ca.slack-edge.com/T07EJ2FLZ2R-U07F5J8NGCR-ec3380dac16d-72',
-            id: 4,
-            texto: 'Estoy cansado😞',
-        },
-    ])
+
+    const [selectedContact, setSelectedContact] = useState(null);
+
+    const [messages, setMessages] = useState ([])
+
+
+    const handleSelect = (contact) => {
+        setSelectedContact(contact)
+        setMessages(contact.mensajes)
+    }
 
 // Función para manejar el envío de un nuevo mensaje
 const handleSendNewMessage = (text) => {
@@ -53,29 +32,43 @@ const handleSendNewMessage = (text) => {
     }
     // Actualiza el estado con el nuevo mensaje
     setMessages([...messages, newMessage])
+
 }
 
 return (
-<div className="container">
-    <div className="navbar">
-        <NavbarUser />
-        <SectionProfile />
-    </div>
-    <div className="content-wrapper">
-        <div className="search">
-            <SearchChat />
-            <SelectSearch/>
-            <AddChat/>
-            <ChatList/>
-        </div>
-        <div className="chat">
-            <MessageList messages={messages} />
-            <NewMessage onSendMessage={handleSendNewMessage} />
-        </div>
-    </div>
-</div>
+    <div className="container">
+        <section>
+            <nav>
+                <div className="navbar">
+                    <NavbarUser selectedContact={selectedContact}/>
+                    <SectionProfile />
+                </div>
+            </nav>
+        </section>
+        <div className="content-wrapper">
+            <div className="search">
+                <SearchChat />
+                <SelectSearch />
+                <AddChat />
+                <div className="hola">
+                    <OrderChat/>
+                    <ChatList onSelectContact={handleSelect}/>
+                </div>
 
-)
+            </div>
+            <div className="chat">
+                <MessageList messages={messages} />
+                <NewMessage onSendMessage={handleSendNewMessage} />
+            </div>
+        </div>
+    </div>
+    );
+
 }
 
+
 export default Chat
+
+
+
+

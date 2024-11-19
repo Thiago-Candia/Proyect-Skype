@@ -1,8 +1,9 @@
 import React from "react"
 import '../Styles/styles.css'
+import contacts from "../Data/contacts";
 
 
-const Message = ({ emisor, hora, status, texto, img, id, prevEmisor }) => {
+const Message = ({ emisor, hora, texto, id, prevEmisor }) => {
     const showEmisorInfo = emisor !== prevEmisor;
 
     return (
@@ -17,7 +18,7 @@ const Message = ({ emisor, hora, status, texto, img, id, prevEmisor }) => {
             {/* Solo muestra la imagen si el mensaje es de otro usuario */}
             {emisor !== 'Tu' && (
                 <div className="box-img">
-                    <img src={img} alt="Profile" />
+                    <img src={contacts.img} alt="Profile" />
                 </div>
             )}
             <div className={`emisor ${emisor === 'Tu' ? 'from-me' : 'from-user'}`}>

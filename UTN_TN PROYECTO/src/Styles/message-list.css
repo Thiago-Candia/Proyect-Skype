@@ -1,11 +1,28 @@
 
+
+
+/* MESSAGE BOX */
+
+.message-list-box {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    width: 100%;
+    height: 80%;
+}
+
+
+/* MESSAGE LIST */
+
 .message-list{
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 80%;
-    height: 100;
+    height: 100%;
     background-color: var(--black-bgc);
     padding: 5px;
     padding-top: 30px;
+    word-wrap: break-word; /* Si un mensaje es muy largo, ajusta el texto */
+    overflow-y: auto;
 }

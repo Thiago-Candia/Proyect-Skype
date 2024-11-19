@@ -1,17 +1,20 @@
 import React from 'react'
 import '../Styles/styles.css'
+import contacts from '../Data/contacts'
 
-const NavbarUser = () => {
+const NavbarUser = ({selectedContact}) => {
 return (
     <div className='navbar-user-box'>
         <div className='info-user'>
             <div className='box-img-usuario'>
-            <img src="https://i.pinimg.com/564x/fd/91/b1/fd91b1715061efc79dbb6678aea0f9b9.jpg" alt="" />
+                <img src={selectedContact ? selectedContact.img : ""}/>
             </div>
             <div className='infoUser-name'>
                 <div className='nameAndIcon'>
                     <button>
-                        <span className='name-user'>nombre usuario</span>
+                        <span className='name-user'>
+                            {selectedContact ? selectedContact.nombre : 'Usuario'}
+                        </span>
                         <i class="bi bi-gear"></i>
                     </button>
                 </div>
