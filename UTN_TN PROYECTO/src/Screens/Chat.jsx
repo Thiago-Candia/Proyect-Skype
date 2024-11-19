@@ -50,11 +50,10 @@ return (
                 <SearchChat />
                 <SelectSearch />
                 <AddChat />
+                <OrderChat/>
                 <div className="hola">
-                    <OrderChat/>
                     <ChatList onSelectContact={handleSelect}/>
                 </div>
-
             </div>
             <div className="chat">
                 <MessageList messages={messages} />

@@ -1,8 +1,14 @@
+
+/* CONTAINER MAIN */
+
 .container{
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
 }
+
+/* NAVBAR USER */
 
 .navbar{
     display: flex;
@@ -13,19 +19,17 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 
 .search{
+    display: flex;
+    flex-direction: column;
     width: 20%;
-    height: 80%;
     background-color: red;
 }
 
-.hola{
-    height: 100%;
-}
 
 .chat {
     display: flex;
