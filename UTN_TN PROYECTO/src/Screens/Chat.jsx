@@ -1,19 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../Styles/styles.css'
 import { MessageList, NavbarUser, NewMessage, SectionProfile, SearchChat, SelectSearch, AddChat, ChatList, OrderChat, HomeSection } from "../Components";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import contacts from "../Data/contacts";
 
 
 const Chat = () => {
 
-    const [selectedContact, setSelectedContact] = useState(null);
-
+    const { contact_id } = useParams();
+    const [selectedContact, setSelectedContact] = useState(null)
     const [messages, setMessages] = useState ([])
 
 
-    const handleSelect = (contact) => {
-        setSelectedContact(contact)
-        setMessages(contact.mensajes)
-    }
+    useEffect(() => {
+        const foundContact = contacts.find(
+            (contact) => contact.id == contact_id
+        )
+            setSelectedContact(foundContact)
+            setMessages(foundContact?.mensajes || [])
+        }, [contact_id])
+
+
+/*     const navigate = useNavigate()
+
+    useEffect(
+        () => {
+            if(!selectedContact){
+                navigate(`/contacts/${contacts[0].id}`)
+            }
+        },
+        []
+    ) */
+
+
+
 
 // Función para manejar el envío de un nuevo mensaje
 const handleSendNewMessage = (text) => {
@@ -50,7 +70,7 @@ return (
                 <AddChat />
                 <OrderChat/>
                 <div className="hola">
-                    <ChatList onSelectContact={handleSelect}/>
+                    <ChatList/>
                 </div>
             </div>
             <div className="chat">
