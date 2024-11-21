@@ -54,28 +54,28 @@ const contacts = [
         id: 3,
         mensajes: [
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:10',
                 id: 1,
                 texto: 'Hola que tal?',
                 status: 'visto'
             },
             {
-                emisor: 'USUARIO',
+                emisor: 'Usuario',
                 hora: '23:11',
                 id: 2,
                 texto: 'Si, hoy aprendi estados',
                 status: 'visto'
             },
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:12',
                 id: 3,
-                texto: 'Eso que significa :nerd_face:?',
+                texto: 'Eso que significa 😎?',
                 status: 'no-visto'
             },
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:13',
                 id: 4,
                 texto: 'Estas ahi?',
@@ -89,33 +89,26 @@ const contacts = [
         id: 4,
         mensajes: [
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:10',
                 id: 1,
-                texto: 'Hola que tal?',
+                texto: 'Momo hablas mucho?',
                 status: 'visto'
             },
             {
-                emisor: 'USUARIO',
+                emisor: 'Usuario',
                 hora: '23:11',
                 id: 2,
-                texto: 'Si, hoy aprendi estados',
+                texto: 'Te vas baneado..',
                 status: 'visto'
             },
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:12',
                 id: 3,
-                texto: 'Eso que significa :nerd_face:?',
+                texto: 'Noooo',
                 status: 'no-visto'
-            },
-            {
-                emisor: 'YO',
-                hora: '23:13',
-                id: 4,
-                texto: 'Estas ahi?',
-                status: 'no-recibido'
-            },
+            }
         ]
     },
     {
@@ -124,31 +117,24 @@ const contacts = [
         id: 5,
         mensajes: [
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:10',
                 id: 1,
-                texto: 'Hola que tal?',
+                texto: 'No entendi, que?',
                 status: 'visto'
             },
             {
-                emisor: 'USUARIO',
+                emisor: 'Usuario',
                 hora: '23:11',
                 id: 2,
-                texto: 'Si, hoy aprendi estados',
+                texto: 'so, jajaj eduquee',
                 status: 'visto'
             },
             {
-                emisor: 'YO',
-                hora: '23:12',
-                id: 3,
-                texto: 'Eso que significa :nerd_face:?',
-                status: 'no-visto'
-            },
-            {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:13',
                 id: 4,
-                texto: 'Estas ahi?',
+                texto: '????',
                 status: 'no-recibido'
             },
         ]
@@ -204,14 +190,14 @@ const contacts = [
                 emisor: 'Tu',
                 hora: '23:10',
                 id: 1,
-                texto: 'Hola Melman, seguis en madagascar?',
+                texto: 'Uhh wacho, los cables',
                 status: 'visto'
             },
             {
                 emisor: 'Usuario',
                 hora: '23:11',
                 id: 2,
-                texto: 'Sii, estoy con el curso todavia',
+                texto: 'jajajaj',
                 status: 'visto'
             }
         ]
@@ -222,7 +208,7 @@ const contacts = [
         id: 4,
         mensajes: [
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:10',
                 id: 1,
                 texto: 'Hola que tal?',
@@ -236,14 +222,14 @@ const contacts = [
                 status: 'visto'
             },
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:12',
                 id: 3,
                 texto: 'Eso que significa :nerd_face:?',
                 status: 'no-visto'
             },
             {
-                emisor: 'YO',
+                emisor: 'Tu',
                 hora: '23:13',
                 id: 4,
                 texto: 'Estas ahi?',

@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import '../Styles/styles.css'
-import { MessageList, NavbarUser, NewMessage } from "../Components";
-import SectionProfile from "../Components/SectionProfile";
-import SearchChat from "../Components/SearchChat";
-import SelectSearch from "../Components/SelectSearch";
-import AddChat from "../Components/AddChat";
-import ChatList from "../Components/ChatList";
-import OrderChat from "../Components/OrderChat";
-import contacts from "../Data/contacts";
+import { MessageList, NavbarUser, NewMessage, SectionProfile, SearchChat, SelectSearch, AddChat, ChatList, OrderChat, HomeSection } from "../Components";
 
 
 const Chat = () => {
@@ -40,7 +33,12 @@ return (
         <section>
             <nav>
                 <div className="navbar">
-                    <NavbarUser selectedContact={selectedContact}/>
+                    { selectedContact ? 
+                        (<>
+                            <NavbarUser selectedContact={selectedContact}/>
+                        </>) 
+                        : ( <div className="navbar-start"></div>)
+                    }
                     <SectionProfile />
                 </div>
             </nav>
@@ -56,8 +54,14 @@ return (
                 </div>
             </div>
             <div className="chat">
-                <MessageList messages={messages} />
-                <NewMessage onSendMessage={handleSendNewMessage} />
+                { selectedContact ? (
+                    <>
+                        <MessageList messages={messages} usuarioActual={selectedContact} />
+                        <NewMessage onSendMessage={handleSendNewMessage} />
+                    </>
+                ) : (
+                    <HomeSection/>
+                )}
             </div>
         </div>
     </div>

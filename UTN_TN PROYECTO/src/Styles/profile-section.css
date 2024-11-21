@@ -29,7 +29,7 @@
 
 .nombre-y-saldo {
     display: flex;
-    flex-direction: row; /* Coloca el nombre y el saldo uno al lado del otro */
+    flex-direction: row;
 }
 
 /* SALDO */

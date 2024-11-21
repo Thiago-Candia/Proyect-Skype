@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Styles/styles.css'
-import contacts from '../Data/contacts'
 
 const NavbarUser = ({selectedContact}) => {
 return (
