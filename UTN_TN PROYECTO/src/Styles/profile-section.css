@@ -70,3 +70,37 @@
 
 
 
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%; /* Ajustar para que aparezca justo debajo del nombre o la imagen */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    z-index: 10;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-dropdown ul li {
+    margin-bottom: 10px;
+}
+
+.profile-dropdown ul li button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.profile-dropdown ul li button:hover {
+    color: #007bff;
+}

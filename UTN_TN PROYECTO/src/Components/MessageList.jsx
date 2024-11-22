@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Message from "./Message";
 import '../Styles/styles.css';
 
+
 const MessageList = ({ messages, usuarioActual }) => {
+    const messageListRef = useRef(null)
+    const scrollRef = useRef(null)
+
+    useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollIntoView({ behavior: "smooth" })
+        }
+    }, [messages])
+
     const MessageJSX = messages.map((message, index) => {
         return (
             <Message
@@ -17,9 +27,10 @@ const MessageList = ({ messages, usuarioActual }) => {
     })
 
     return (
-        <div className="message-list-box">
+        <div className="message-list-box" ref={messageListRef}>
             <div className="message-list">
                 {MessageJSX}
+                <div ref={scrollRef}/>
             </div>
         </div>
     )

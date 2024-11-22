@@ -35,7 +35,7 @@ const Chat = () => {
 
 
 
-// Función para manejar el envío de un nuevo mensaje
+// manejar el envío de un nuevo mensaje
 const handleSendNewMessage = (text) => {
     const newMessage = {
         emisor: 'Tu',
@@ -43,7 +43,7 @@ const handleSendNewMessage = (text) => {
         hora: new Date().toLocaleTimeString(),
         id: messages.length + 1,
     }
-    // Actualiza el estado con el nuevo mensaje
+    // actualiza el estado con el nuevo mensaje
     setMessages([...messages, newMessage])
 
 }

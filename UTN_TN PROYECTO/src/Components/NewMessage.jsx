@@ -10,10 +10,9 @@ const handleChange = (event) => {
 }
 
 
-/* 
-Primero verifica si el campo de texto no está vacío usando inputValue.replace() (elimina los espacios).
+/* si el campo de texto no esta vacio inputValue.replace() (elimina los espacios).
 Si hay texto, llama a onSendMessage(inputValue) para enviar el mensaje al componente padre.
-Luego, usa setInputValue('') para limpiar el input de texto. */
+Luego, usa setInputValue('') para limpiar el input de texto */
 const handleSend = () => {
     if(inputValue.replace()){
         onSendMessage(inputValue)
