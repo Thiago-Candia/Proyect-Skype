@@ -8,7 +8,7 @@
     flex-direction: column;
     background-color: var(--black-bgc);
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
 
 
@@ -19,7 +19,7 @@
     flex-direction: column;
     margin: auto;
     width: 80%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--black-bgc);
     padding: 5px;
     padding-top: 30px;

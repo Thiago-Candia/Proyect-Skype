@@ -63,28 +63,30 @@ return (
                 </div>
             </nav>
         </section>
-        <div className="content-wrapper">
-            <div className="search">
-                <SearchChat />
-                <SelectSearch />
-                <AddChat />
-                <OrderChat/>
-                <div className="hola">
-                    <ChatList/>
+        <section>
+            <main>
+                <div className="content-wrapper">
+                    <div className="search">
+                        <SearchChat />
+                        <SelectSearch />
+                        <AddChat />
+                        <OrderChat/>
+                        <ChatList/>
+                    </div>
+                <div className="chat">
+                    { selectedContact ? (
+                        <>
+                            <MessageList messages={messages} usuarioActual={selectedContact} />
+                            <NewMessage onSendMessage={handleSendNewMessage} />
+                        </>
+                    ) : (
+                        <HomeSection/>
+                    )}
                 </div>
             </div>
-            <div className="chat">
-                { selectedContact ? (
-                    <>
-                        <MessageList messages={messages} usuarioActual={selectedContact} />
-                        <NewMessage onSendMessage={handleSendNewMessage} />
-                    </>
-                ) : (
-                    <HomeSection/>
-                )}
-            </div>
+            </main>
+        </section>
         </div>
-    </div>
     );
 
 }
