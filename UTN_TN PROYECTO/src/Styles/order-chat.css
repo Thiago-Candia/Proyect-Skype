@@ -1,5 +1,6 @@
 .order-chat{
     display: flex;
+    height: 35px;
 }
 
 .order-chat span{

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/styles.css';
 import { GrKey } from "react-icons/gr";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 
 const Login = () => {
@@ -27,6 +27,10 @@ const Login = () => {
 
         setShowOptions(false);
     }
+
+/*     const goBack = () => {
+        navigate(-1)
+    } */
 
     return (
         <div className='screen-login'>

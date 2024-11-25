@@ -27,6 +27,11 @@
 @import url('home-section.css');
 
 
+/* RESPONSIVE DESING */
+
+@import url('responsive-desing.css');
+
+
 /* SCREEN STYLES */
 
 @import url('chat.css');
